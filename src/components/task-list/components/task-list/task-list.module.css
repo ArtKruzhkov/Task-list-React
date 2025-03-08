@@ -1,0 +1,30 @@
+.taskListItem {
+    display: flex;
+    align-items: center;
+}
+
+
+.taskItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.taskItem .listItemText {
+    width: fit-content;
+    -webkit-flex: unset;
+    -ms-flex: unset;
+    flex: unset;
+}
+
+.listItemText span {
+    width: fit-content;
+}
+
+.deleteButtonWrapper {
+    position: static;
+    right: unset;
+    top: unset;
+    transform: unset;
+}
