@@ -1,0 +1,9 @@
+.newTaskContainer {
+    margin-top: 42px;
+    padding: 16px;
+    width: 300px;
+}
+
+.newTaskContainer .addTaskBtn {
+    margin-top: 16px;
+}

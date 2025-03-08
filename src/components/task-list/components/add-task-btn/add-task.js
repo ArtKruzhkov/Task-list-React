@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../actions/taskActions";
-import { Button, Drawer, Toolbar, TextField } from "@mui/material";
+import { Button, Drawer, TextField } from "@mui/material";
+import styles from "./add-task.module.css";
 
 const AddTaskButton = () => {
     const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ const AddTaskButton = () => {
             setError(true);
             return;
         }
-        dispatch(addTask(task)); // Добавляем в Redux
+        dispatch(addTask(task));
         toggleDrawer(false)();
     };
 
@@ -32,8 +32,7 @@ const AddTaskButton = () => {
             </Button>
 
             <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-                <Toolbar />
-                <div style={{ padding: 16, width: 300 }}>
+                <div className={styles.newTaskContainer}>
                     <TextField
                         fullWidth
                         label="Новая задача"
@@ -45,9 +44,9 @@ const AddTaskButton = () => {
                     <Button
                         fullWidth
                         variant="contained"
+                        className={styles.addTaskBtn}
                         onClick={handleAddTask}
                         disabled={!task.trim()}
-                        style={{ marginTop: 16 }}
                     >
                         Добавить задачу
                     </Button>

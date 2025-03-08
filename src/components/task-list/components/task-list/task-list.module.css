@@ -1,9 +1,3 @@
-.taskListItem {
-    display: flex;
-    align-items: center;
-}
-
-
 .taskItem {
     display: flex;
     align-items: center;
@@ -20,11 +14,4 @@
 
 .listItemText span {
     width: fit-content;
-}
-
-.deleteButtonWrapper {
-    position: static;
-    right: unset;
-    top: unset;
-    transform: unset;
 }

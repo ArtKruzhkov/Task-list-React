@@ -1,17 +1,17 @@
-// import { ADD_TASK, DELETE_TASK, TOGGLE_TASK, EDIT_TASK } from "../actions/taskActions";
 import { ADD_TASK, DELETE_TASK, EDIT_TASK } from "../actions/taskActions";
+
 const initialState = [
     {
         id: 1,
-        description: 'Learn React Basics'
+        description: 'Task 1'
     },
     {
         id: 2,
-        description: 'Learn Hooks'
+        description: 'Task 2'
     },
     {
         id: 3,
-        description: 'Learn Router'
+        description: 'Task 3'
     }
 ];
 
@@ -25,8 +25,6 @@ function taskReducer(state = initialState, action) {
             }];
         case DELETE_TASK:
             return state.filter(task => task.id !== action.payload.id);
-        // case TOGGLE_TASK:
-        //     return state.map(task => task.id === action.payload.id ? { ...task, completed: !task.completed } : task);
         case EDIT_TASK:
             return state.map(task =>
                 task.id === action.payload.id ? { ...task, description: action.payload.newDescription } : task
