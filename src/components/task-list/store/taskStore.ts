@@ -1,15 +1,3 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import taskReducer from "../reducers/taskReducer";
-
-// const taskStore = configureStore({
-//     reducer: {
-//         tasks: taskReducer
-//     }
-// });
-
-// export default taskStore;
-
-
 import { createStore, applyMiddleware, compose } from "redux";
 import taskReducer from "../reducers/taskReducer";
 import { TaskActionTypes } from "../actions/taskActions";
