@@ -79,9 +79,10 @@ const TaskList: React.FC = () => {
 
     return (
         <>
-            <List>
+            <List className={styles.listMain}>
                 {tasks.map((task, index) => (
                     <ListItem
+                        className={styles.listItem}
                         key={task.id}
                         ref={index === tasks.length - 1 ? lastTaskRef : null}
                         component="li"
