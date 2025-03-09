@@ -4,7 +4,7 @@ import taskStore from '../task-list/store/taskStore';
 import AddTaskButton from '../task-list/components/add-task-btn/add-task';
 import TaskList from '../task-list/components/task-list/task-list';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className={styles.App}>
       <Provider store={taskStore}>
